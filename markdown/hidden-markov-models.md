@@ -56,8 +56,6 @@ Define $\beta_m(i) = \Pr(O_{m+1:n} | S_m=i, \lambda)$ and $\beta_m=(\beta_m(1), 
 **Forward-backward (Smoothing)**:
 $$\gamma_k = \Pr(S_k|O_{1:n}, \lambda) = \frac{\Pr(S_k, O_{1:n}|\lambda)}{\Pr(O|\lambda)} =\frac{\Pr(O_{k+1:n}|S_k, O_{1:k}, \lambda) \odot \Pr(S_k, O_{1:k}|\lambda)}{\sum_{S_k} \Pr(O, S_k| \lambda)}= \frac{\alpha_k \odot \beta_k}{\alpha_k \cdot \beta_k}$$
 
-(Pozn.: Tahle verze se lisi od Bartakovy - neni potreba bayes rule ani normalizace na konci vypoctu. Vysledek by mel byt identicky. Akorat se na zacatku nepodminuje na pozorovanich ale na stavech)
-
 **Filtering**: $$\Pr(S_n | O_{1:n}, \lambda)=\frac{\alpha_n}{\sum_i\alpha_n(i)}$$
 **Prediction**: $$\Pr(S_{n+1} | O_{1:n}, \lambda) = \frac{\sum_i\Pr(S_{n+1}| S_n=i, \lambda)\Pr(O_{1:n}, S_n|\lambda)}{\Pr(O|\lambda)} = \frac{\mathbb{A}^T\alpha_n}{\sum_i\alpha_n(i)}$$
 

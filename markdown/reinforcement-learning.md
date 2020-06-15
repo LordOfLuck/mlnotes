@@ -15,7 +15,7 @@ A MDP consists of the follwing:
 4. A reward function $R_a{s, s'}$ - immediate reward for doing action a in state $s$ and moving to state $s'$
 
 The transition probabilities between states are independent of previously visited states (markov property)
-Reward function can depend only on state (Bartákovy slidy, můžeme přechazet mezi definicemi $R(s) = \mathbb{E}_a\mathbb{E}_{s'}[R_a{s, s'}]$, takže immediate reward stavu je průměrný immediate reward stavu. Rozdíl je také v tom, že případ $R(s)$ počítá s tím, že reward je obdržen při příchodu do stavu s, zatímco $R_a(s, s)$ je přidělen až během přechodu do dalšího stavu a dal by se tak počítat jako reward v dalším časovém kroku, což má vliv na formulaci následujících rovnic)
+Reward function can depend only on state (we can transition between definitions: $R(s) = \mathbb{E}_a\mathbb{E}_{s'}[R_a{s, s'}]$)
 
 The agent can have a
 1. deterministic policy $\pi : \mathcal{S}  \rightarrow \mathcal{A_s}$
